@@ -1,0 +1,12 @@
+#test, this is not best way, however in local host, this might be ideal way
+
+secretGenerator:
+  - name: db-password
+    literals:
+      - password=mypassword
+  - name: django
+    literals:
+      - secret=secretdefaultoverrdie
+resources:
+  - postgres.yaml
+  - django.yaml
